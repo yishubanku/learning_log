@@ -8,6 +8,7 @@
       <button type="submit" class="logout-link">Log out</button>
     </form>
   {% else %}
+    <a href="{% url 'users:register' %}">Register</a> -
     <a href="{% url 'users:login' %}">Log in</a>
   {% endif %}
 </p>
