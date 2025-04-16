@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from .models import Topic, Entry
@@ -9,6 +10,7 @@ def index(request):
     """学习笔记的主页"""
     return render(request, 'learning_logs/index.html')
 
+@login_required
 def topics(request):
     """显示所有的主题"""
     topics = Topic.objects.order_by('date_added')
