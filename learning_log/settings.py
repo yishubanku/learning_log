@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'learning_logs',
     'users',
 
+    # 第三方应用程序
+    'bootstrap4',
+
     # 默认添加的应用程序
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,8 +129,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# 我的设置
-LOGIN_URL = 'users:login'
-
 # 管理员 ll_admin/ll_admin
 # 普通用户 ll_user/123456@qaz
+
+# 我的设置
+LOGIN_URL = 'users:login'
